@@ -21,9 +21,10 @@ export const useCryptosQuery = (limit: number, start: number) => {
     return useQuery({
         queryKey: ['cryptos', limit, start],
         queryFn: fetchCryptos,
+        //@ts-ignore
         options: {
             keepPreviousData: true,
-            // refetchInterval: 60000
+            refetchInterval: 60000
         }
     });
 };
