@@ -19,6 +19,18 @@ const fetchMetaData = async (id: number) => {
   return response.json()
 }
 
+/**
+ * Fetches the latest cryptocurrency listings and enhances each listing with additional metadata,
+ * such as the cryptocurrency's logo. Data is fetched from a base API and then each listing's metadata
+ * is fetched individually. The results are then combined and returned.
+ * 
+ * @param {NextApiRequest} req - The API request object, including the URL from which query parameters are extracted.
+ * @returns {Promise<any>} A promise that resolves to the enhanced cryptocurrency listings or an error message.
+ * 
+ * @example
+ * // Call within an async context:
+ * const result = await GET(req);
+ */
 export async function GET(req: NextApiRequest) {
   const urlParams = new URL(req.url as string);
   const limit = urlParams.searchParams.get('limit') || '10';

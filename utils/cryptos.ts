@@ -24,6 +24,22 @@ type FormatterOption = {
     currency: string
 }
 
+/**
+ * Formats a number as a currency, optionally including a currency symbol.
+ * For large numbers, abbreviates with suffixes such as 'K', 'M', 'B', or 'T'.
+ * 
+ * @param {number} value - The numeric value to be formatted.
+ * @param {boolean} [includeSymbol=true] - Determines whether the currency symbol is included.
+ * @returns {string} The formatted currency string.
+ * 
+ * @example
+ * formatCurrency(1234567);
+ * // returns "$1.23M"
+ * 
+ * @example
+ * formatCurrency(1234567, false);
+ * // returns "1.23M"
+ */
 export const formatCurrency = (value: number, includeSymbol = true) => {
     //@ts-ignore
     const options: FormatterOption = {

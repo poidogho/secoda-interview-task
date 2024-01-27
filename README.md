@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Seconda Interview Task
+![Screenshot App](./media/screenshot.png)
 
-## Getting Started
+![Video](./media/demo.mov)
 
-First, run the development server:
+# Running
+Create a `.env.local` with the following credentials below
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Feel free to add your environment. This is a free teir and gets rate limited often
+
+```js
+NEXT_API_KEY=44d70180-fe03-41dc-a6e2-b78d07438ef0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the app
+To run the app execute the following commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Running unit tests
+To run the unit test execute the folloeing command below
 
-## Learn More
+```
+npm test
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Additional information / context
+- Coinmarketcap api is heavily rate limit in the free teir access key and this affects pagination due to the number of endpoint we hit within a minute
+- Ran out of time to implement the following below
+ * Search functionality 
+ * More extensive unit testing and or cypress e2e tests
+ * Proper jsdoc comments with my react componet and helper typescript functions
