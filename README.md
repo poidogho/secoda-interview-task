@@ -34,3 +34,4 @@ npm test
  * More extensive unit testing and or cypress e2e tests
  * Proper jsdoc comments with my react componet and helper typescript functions
  * Added the `NEXT_API_KEY` in the `.env.local`. It defaults to our own api key but i did so as a redundancy / fallback so whoever is testing would have a key to use
+ * In the `Last (24H)` column to get the historical quote date it requires api key given that restriction i was unable to implement the graph given in the example user interface
