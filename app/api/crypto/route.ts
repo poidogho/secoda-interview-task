@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const API_BASE_URL = 'https://pro-api.coinmarketcap.com';
-const API_KEY = '44d70180-fe03-41dc-a6e2-b78d07438ef0';
+const API_KEY = process.env.NEXT_API_KEY ?? '44d70180-fe03-41dc-a6e2-b78d07438ef0';
 
 const headers = {
   'X-CMC_PRO_API_KEY': API_KEY,

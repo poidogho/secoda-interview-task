@@ -1,9 +1,6 @@
+'use client'
+import Table from "@/components/cryptos/Table";
 
+const Home = () => <Table />
 
-export default function Home() {
-  return (
-    <main >
-
-    </main>
-  );
-}
+export default Home

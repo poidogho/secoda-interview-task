@@ -1,10 +1,7 @@
 import '@mantine/core/styles.css';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { MantineProvider, createTheme } from '@mantine/core';
 import TanstackProvider from "../provider/TanstackProvider";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -22,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <TanstackProvider>
           <MantineProvider theme={theme}>
             {children}
