@@ -25,6 +25,7 @@ type FormatterOption = {
 }
 
 export const formatCurrency = (value: number, includeSymbol = true) => {
+    //@ts-ignore
     const options: FormatterOption = {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,

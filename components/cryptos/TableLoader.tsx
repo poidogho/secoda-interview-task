@@ -5,8 +5,8 @@ type TableLoaderProps = {
 }
 const TableLoader = ({ skeletonCount }: TableLoaderProps) => (
     <Box data-testid='table-loader'>
-        <Skeleton height={20} mt={200} radius="xl" />
-        {new Array(skeletonCount).map((_, idx) => <Skeleton key={idx} height={20} mt={10} radius="xl" />)}
+        <Skeleton data-testid="skeleton" height={20} mt={200} radius="xl" />
+        {new Array(skeletonCount).fill(null).map((_, idx) => <Skeleton key={idx} height={20} mt={10} radius="xl" />)}
     </Box>
 )
 
