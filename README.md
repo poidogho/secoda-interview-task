@@ -33,3 +33,4 @@ npm test
  * Search functionality 
  * More extensive unit testing and or cypress e2e tests
  * Proper jsdoc comments with my react componet and helper typescript functions
+ * Added the `NEXT_API_KEY` in the `.env.local`. It defaults to our own api key but i did so as a redundancy / fallback so whoever is testing would have a key to use
