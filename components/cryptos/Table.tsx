@@ -8,6 +8,7 @@ import TableLoader from './TableLoader';
 import TableFooter from './TableFooter';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
+import { useTimer } from '../../hooks/useTimer'
 
 const Table = () => {
     const ColumnNames = [
@@ -23,6 +24,7 @@ const Table = () => {
     const itemsPerPage = 10;
     const start = ((currentPage - 1) * itemsPerPage + 1)
     const { data: cryptos, isLoading, isError } = useCryptosQuery(itemsPerPage, start);
+    const timer = useTimer()
     console.log({ cryptos })
 
     const pageCount = Math.ceil(cryptos?.status?.total_count / itemsPerPage);
@@ -34,6 +36,10 @@ const Table = () => {
     if (isError) {
         return <Box>Error Loading Page</Box>;
     }
+
+    // return (
+    //     <Box>{timer}</Box>
+    // )
 
     return (
         <ScrollArea>
